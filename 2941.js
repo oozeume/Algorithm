@@ -15,11 +15,11 @@ let croatia = ["c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="];
 // 보니까 크로아티아 배열을 하나씩 돌면서 input에서 크로아티아 글자가 있으면 split하고 그부분을 Q로 변경
 
 function solution(input) {
-  for (let x of croatia) {
-    input = input.split(x).join("Q");
-  }
+    for (let x of croatia) {
+        input = input.split(x).join("Q");
+    }
 
-  return input.length; // return input일 경우 QeQQak를 반환한다.
+    return input.length; // return input일 경우 QeQQak를 반환한다.
 }
 
 console.log(solution(input));
