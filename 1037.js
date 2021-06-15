@@ -14,4 +14,3 @@ let maxNum = Math.max.apply(null, numbers);
 let minNum = Math.min.apply(null, numbers);
 
 console.log(maxNum * minNum);
-
