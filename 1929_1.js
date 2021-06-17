@@ -8,22 +8,22 @@ const N = 16;
 const isPrimeNumber = Array(N + 1).fill(true); // 배열을 만들고 배열을 true로 채운다. 
 isPrimeNumber[1] = false;
 
-for (let n = 2; n <= Math.ceil(Math.sqrt(N)); n++) { // 2, 3, 4
-    if (isPrimeNumber[n]) {
+for (let i = 2; i <= Math.ceil(Math.sqrt(N)); i++) { 
+    if (isPrimeNumber[i]) {
         let m = 2;
-        while (n * m <= N) {
-            isPrimeNumber[n * m] = false;
+        while (i * m <= N) {
+            isPrimeNumber[i * m] = false;
             m++;
         }
     }
 }
 
-const results = [];
-for (let n = M; n <= N; n++) {
-    if (isPrimeNumber[n]) {
-        results.push(n);
+const results = []; // 찾은 소수를 넣어줄 빈 배열
+for (let i = M; i <= N; i++) { // 3부터 16까지 반복
+    if (isPrimeNumber[i]) { // isPrimeNumber[ ]
+        results.push(i);
     }
 }
-console.log(results.join('\n'));
+console.log(results.join('\n')); // 배열의 모든 요소를 문자열로 변환한 후 반환
 
 
