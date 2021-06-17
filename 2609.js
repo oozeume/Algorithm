@@ -2,8 +2,7 @@ const fs = require('fs');
 const input = (
     process.platform === 'linux'
         ? fs.readFileSync('/dev/stdin').toString()
-        :
-        `24 18`
+        :`24 18`
 ).split(' ');
 
 let Num1 = Number(input[0]);
@@ -28,5 +27,5 @@ while (bigNum % smallNum !== 0) {
     }
 }
 
-console.log(smallNum);
-console.log(Num1*Num2 / smallNum);
+console.log(smallNum); // 최대공약수
+console.log(Num1*Num2 / smallNum); //최소공배수
