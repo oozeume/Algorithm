@@ -2,7 +2,7 @@ const fs = require('fs');
 const input = (
     process.platform === 'linux'
         ? fs.readFileSync('/dev/stdin').toString()
-        : // 예제 입력부분 (예제와 똑같이 입력!)
+        : 
         `3
 2 2
 1 5
@@ -13,7 +13,7 @@ for (let i = 1; i <= Number(input[0]); i++) {
     let num = input[i].split(' ').map(Number);
     let [N, M] = [num[0], num[1]];
 
-    let answer = combination(M, N);
+    let answer = combination(M, N); // M개 중에 N개
     console.log(Math.round(answer));
 }
 
