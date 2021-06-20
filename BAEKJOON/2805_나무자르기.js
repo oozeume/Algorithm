@@ -19,7 +19,7 @@ let right = 2000000000;
 
 while (left <= right) {
     let mid = parseInt((left + right) / 2); // while문 안에서 반복해서 중간값 찾아준다.
-    let result = tree.reduce((accu, curr) => { // 결과값 찾아주는데 reduce메소드로 계속 순회
+    let result = tree.reduce((accu, curr) => { // 나무의 길이 찾는 변수 result. reduce메소드로 계속 순회
         if (curr - mid > 0) return accu + (curr - mid);
         else return accu;
     }, 0);
