@@ -88,7 +88,7 @@ class Queue {
 }
 
 const myQueue = new Queue();
-const output = []; // 값을 담아줄 빈 배열
+const output = []; // 값을 담아줄 빈 배열, for문으로 나온 결과값을 output에 계속 push해주는 과정
 
 for (let i = 1; i < input.length; i++) {
     const [queueCommand, value] = input[i].split(" ");
