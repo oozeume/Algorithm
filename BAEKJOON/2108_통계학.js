@@ -4,11 +4,11 @@ const input = (
         ? fs.readFileSync('/dev/stdin').toString()
         :
         `5
--1
+1
+3
+8
 -2
--3
--1
--2`
+2`
 ).split('\n');
 
 let N = Number(input.shift());
@@ -26,7 +26,29 @@ let middle = numArr[parseInt(numArr.length / 2)];
 // 최빈값 : N개의 수들 중 가장 많이 나타나는 값
 // function getMode(numArr) {
 // 요소의 중복횟수 구하기
+const modeMap = new Map();
 
+for (let i = 0; i < numArr.length; i++) {
+    if (modeMap.has(numArr[i])) {
+        modeMap.set(numArr[i], modeMap.get(numArr[i]) + 1);
+    } else {
+        modeMap.set(numArr[i], 1);
+    }
+}
+
+let maxNum = [];
+let maxCount = 0;
+
+for (let key of modeMap.keys()) {
+    if (modeMap.get(key) > maxCount) {
+        maxNum = [key];
+        maxCount = modeMap.get(key);
+    } else if (modeMap.get(key) === maxCount) {
+        maxNum.push(key)
+    }
+}
+
+let mode = maxNum.length > 1 ? maxNum.sort((a, b) => a - b)[1]: maxNum[0];
 
 
 // 범위 : N개의 수들 중 최댓값과 최솟값의 차이
@@ -34,6 +56,6 @@ let range = numArr[N - 1] - numArr[0];
 
 console.log(average);
 console.log(middle);
-// console.log(mode);
+console.log(mode);
 console.log(range);
 
