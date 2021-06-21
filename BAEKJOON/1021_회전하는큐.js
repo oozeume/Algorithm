@@ -48,7 +48,7 @@ for (num of elements) {
 
     if (left <= right) { // 요소가 배열의 왼쪽에 더 가까운 경우
         for (let j = 0; j < left; j++) {
-            moveElement(queue, 'goBack');
+            moveElement(queue, 'goBack'); // 왼쪽으로 이동시키는 함수 
         }
     } else {
         for (let j = 0; j < right; j++){ // 요소가 배열의 오른쪽에 더 가까운 경우
