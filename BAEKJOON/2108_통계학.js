@@ -9,9 +9,9 @@ const input = (
 8
 -2
 2`
-).split('\n');
+).trim().split("\n").map(Number);
 
-let N = Number(input.shift());
+let N = input.shift();
 let numArr = input.sort((a, b) => a - b).map(Number);
 
 // 산술평균 : N개의 수들의 합을 N으로 나눈 값
@@ -24,8 +24,6 @@ let middle = numArr[parseInt(numArr.length / 2)];
 
 
 // 최빈값 : N개의 수들 중 가장 많이 나타나는 값
-// function getMode(numArr) {
-// 요소의 중복횟수 구하기
 const modeMap = new Map();
 
 for (let i = 0; i < numArr.length; i++) {
@@ -49,7 +47,6 @@ for (let key of modeMap.keys()) {
 }
 
 let mode = maxNum.length > 1 ? maxNum.sort((a, b) => a - b)[1]: maxNum[0];
-
 
 // 범위 : N개의 수들 중 최댓값과 최솟값의 차이
 let range = numArr[N - 1] - numArr[0];
