@@ -1,15 +1,10 @@
-// function solution(participant, completion) {
-//     var answer = '';
+function solution(participant, completion) {
+    participant.sort();
+    completion.sort();
+    for (let i = 0; i < participant.length; i++) {
+        if (participant[i] !== completion[i])
+            return participant[i];
+    }
+}
 
-
-//     return answer;
-// }
-
-
-let participant = ["leo", "kiki", "eden"];
-let completion = ["eden", "kiki"];
-
-participant.sort();
-completion.sort();
-
-console.log(participant, completion);
+console.log(solution(participant, completion));
