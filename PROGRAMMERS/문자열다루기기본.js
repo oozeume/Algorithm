@@ -1,3 +1,4 @@
+// 처음 풀이
 const solution = (s) => {
   let answer = true;
   let numArr = "1234567890";
@@ -17,5 +18,10 @@ const solution = (s) => {
   return answer;
 }
 
-const s = "1234";
+// 다른 풀이
+const solution = (s) => {
+  return s.length === 4 || s.length === 6 ? !isNaN(s) : false;
+}
+
+const s = "a234";
 console.log(solution(s));
