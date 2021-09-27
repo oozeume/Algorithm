@@ -10,8 +10,8 @@ const solution = (str) => {
       arr.push(x);
     }
   }
-
-  console.log(arr);
+  answer = arr.join('');
+  return answer;
 }
 
 const str = "(A(BC)D)EF(G(H)(IJ)K)LM(N)";
