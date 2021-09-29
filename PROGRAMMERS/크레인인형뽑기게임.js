@@ -17,7 +17,7 @@ const solution = (board, moves) => {
           basket.push(board[j][n]);
         }
         board[j][n] = 0; // 꺼낸 자리 0으로 초기화
-        break;
+        break; // 해당 한개만 꺼내기 위해서 (for문 멈추기)
       }
     }
   }

@@ -3,14 +3,18 @@ const solution = (list, plan) => {
   let queue = list.split('');
 
   for (let x of plan) {
-    if (queue.includes(x)) {
-      if (x !== queue.shift()) {
+    if (queue.includes(x)) { // 이수과목이면
+      if (x !== queue.shift()) { // 이수과목에 포함되어있지만 순서가 안맞다는 뜻
         return "NO";
       } else {
-        return answer;
+        queue.shift();
       }
     }
   }
+  if (queue.length > 0) {
+    return "NO";
+  }
+  return answer;
 }
 
 const list = "CBA";
