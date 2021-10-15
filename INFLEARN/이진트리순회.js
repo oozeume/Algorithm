@@ -1,5 +1,6 @@
 const solution = (v) => {
   let answer;
+
   const DFS = (v) => {
     if (v > 7) { // 종착지점(멈추는 지점)
       return;
@@ -9,6 +10,7 @@ const solution = (v) => {
       console.log(v);
     }
   }
+
   DFS(v);
   return answer;
 }
