@@ -1,15 +1,21 @@
 const solution = (s) => {
   let answer = '';
-  let string = s.split('');
-  for (let i = 0; i < string.length; i++) {
-    if (i % 2 === 0) {
-      answer += string[i].toUpperCase();
+  let index = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === ' ') {
+      index = 0;
+      answer += ' ';
     } else {
-      answer += string[i].toLowerCase();
+      if (index % 2 === 0) {
+        answer += s[i].toUpperCase();
+      } else {
+        answer += s[i].toLowerCase();
+      }
+      index++;
     }
   }
-
-  return string;
+  return answer;
 }
 
 const s = "try hello world";

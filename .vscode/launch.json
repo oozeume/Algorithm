@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "Node Test",
-      "program": "${workspaceFolder}/test.js",
+      "program": "${workspaceFolder}/Programmers/test.js",
       "request": "launch",
       "skipFiles": ["<node_internals>/**"],
       "type": "node"
