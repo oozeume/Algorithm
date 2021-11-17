@@ -24,5 +24,4 @@ const solution = (bridge_length, weight, truck_weights) => {
   return count;
 }
 
-
 console.log(solution(2, 10, [7, 4, 5, 6]));
